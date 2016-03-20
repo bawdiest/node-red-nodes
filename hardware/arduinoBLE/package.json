@@ -1,7 +1,7 @@
 {
-    "name"          : "node-red-node-arduino-BLE-aREST",
+    "name"          : "node-red-node-arduino-BLE",
     "version"       : "0.0.1",
-    "description"   : "A Node-RED node to talk to an Arduino running aREST protocol over BLE",
+    "description"   : "A Node-RED node to talk to an Arduino over BLE by using UART protocol",
     "dependencies"  : {
     },
     "repository" : {
@@ -12,7 +12,7 @@
     "keywords": [ "node-red", "arduino", "firmata", "BLE" ],
     "node-red"      : {
         "nodes"     : {
-            "arduino": "35-arduino.js"
+            "arduinoBLE": "arduinoBLE.js"
         }
     },
     "author": {

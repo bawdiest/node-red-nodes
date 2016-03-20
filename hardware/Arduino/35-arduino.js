@@ -16,7 +16,7 @@
 
 module.exports = function(RED) {
     "use strict";
-    var ArduinoFirmata = require('arduino-firmata');
+    var ArduinoFirmata = require('ble-firmata');
 
     // The Board Definition - this opens (and closes) the connection
     function ArduinoNode(n) {
@@ -29,7 +29,7 @@ module.exports = function(RED) {
         ArduinoFirmata.list(function (err, ports) {
             if (!node.device) {
                 node.log(RED._("arduino.status.connectfirst"));
-                node.board.connect();
+                node.board.connect("UART");
             }
             else {
                 if (ports.indexOf(node.device) === -1) {
